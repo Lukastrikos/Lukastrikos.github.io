@@ -1,0 +1,43 @@
+<html> 
+<head> 
+<link rel="stylesheet" href="style.css"> 
+<style> 
+.text-shadow-2 { 
+background: linear-gradient(-45deg, #FEE864, #F5965E); 
+color: #f4f4f4; 
+text-shadow: -1px -1px white, 1px 1px gray, 2px 2px #7a7a7a, 3px 3px #757575, 4px 4px #707070, 5px 5px #6b6b6b, 6px 6px #666666, 7px 7px #616161, 8px 8px #5c5c5c, 9px 9px #575757, 10px 10px #525252, 11px 11px #4d4d4d, 18px 18px 30px rgba(0, 0, 0, .4), 18px 18px 10px rgba(0, 0, 0, .4); 
+</style> 
+<script> 
+function func(){ 
+x=document.getElementById("a_znach").value; 
+n=(x-x % 10)/10+(x%10)*100; 
+document.getElementById("a").innerHTML ="<h1>"+"2.25= "+ n+"</h1>"; 
+x=document.getElementById("a_znach").value; 
+n=(x-x % 100)/100+(x%100*10); 
+document.getElementById("b").innerHTML ="<h1>"+"2.27= "+ n+"</h1>"; 
+x=document.getElementById("a_znach").value; 
+n=(x%100-x%10)*10+(x-x%100)/10+(x%10); 
+document.getElementById("c").innerHTML ="<h1>"+"2.29= "+ n+"</h1>"; 
+x=document.getElementById("a_znach").value; 
+n=(x-x%100)+(((x%100)%10)*10)+(x%100-x%10)/10; 
+document.getElementById("d").innerHTML ="<h1>"+"2.31= "+ n+"</h1>"; 
+x=document.getElementById("a_znach").value; 
+n=(x%10)*100+(((x-x%10)/10)%10)*10+(x-x%100)/100; 
+document.getElementById("e").innerHTML ="<h1>"+"2.33= "+ n+"</h1>"; 
+} 
+</script> 
+<body> 
+<br> 
+n=<input type="text" value="0" id="a_znach"> 
+<br> 
+<br> 
+<button onclick="func()">Надо нажать</button> 
+<br> 
+<br> 
+<div id="a"></div> 
+<div id="b"></div> 
+<div id="c"></div> 
+<div id="d"></div> 
+<div id="e"></div> 
+</body> 
+</html>
